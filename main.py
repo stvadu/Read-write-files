@@ -31,7 +31,8 @@ def get_shop_list_by_dishes(dishes, person_count):
                 shop_dict[ingr['ingredient_name']] = ingr_dict
                 ingr_list.append(ingr['ingredient_name'])
         else: print('Ошибка в названии блюд!')
+    print('Купить в магазине для блюд:', dishes[0],',',dishes[1], ' на ', person_count, ' персон:' )
     print(json.dumps(shop_dict, ensure_ascii=False, indent = 3))
 
-print('Купить в магазине:')
+
 get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2)
